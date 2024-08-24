@@ -47,8 +47,9 @@ Pastikan sistem Anda memenuhi persyaratan berikut untuk menjalankan aplikasi ini
    - Buka terminal atau command prompt dan navigasikan ke direktori di mana Anda ingin menyimpan proyek ini.
    - Jalankan perintah berikut untuk mengkloning repository:
      ```bash
-     cd [nama_folder]
+       git clone https://github.com/zhqnrf/ads-test.git
      ```
+   - Masuk pada direktori dan buka terminal
 
 2. **Instalasi Dependency:**
    - Jalankan perintah berikut untuk menginstal semua dependensi yang dibutuhkan:
