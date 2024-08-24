@@ -58,18 +58,18 @@ class DatabaseSeeder extends Seeder
         }
 
         $travel1 = Travel::create([
-            'travel_name' => 'Trip to Bali',
+            'travel_name' => 'Trip to Medan',
             'travel_price' => 500,
-            'travel_picture' => 'storage/travel_pictures/medan.jpeg',
+            'travel_picture' => '/storage/travel_pictures/medan.jpeg',
             'id_origin' => 1,
             'id_destination' => 2,
             'id_departure' => 1,
         ]);
 
         $travel2 = Travel::create([
-            'travel_name' => 'Trip to Paris',
+            'travel_name' => 'Trip to Jakarta',
             'travel_price' => 1500,
-            'travel_picture' => 'storage/travel_pictures/jakarta.jpeg',
+            'travel_picture' => '/storage/travel_pictures/jakarta.jpeg',
             'id_origin' => 2,
             'id_destination' => 3,
             'id_departure' => 2,
