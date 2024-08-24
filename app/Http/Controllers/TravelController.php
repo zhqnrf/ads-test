@@ -46,15 +46,15 @@ class TravelController extends Controller
         if ($request->hasFile('travel_picture')) {
             $file = $request->file('travel_picture');
             $fileName = time() . '_' . $file->getClientOriginalName();
-            $filePath = $file->storeAs('travel_pictures', $fileName, 'public');
-
-            $validated['travel_picture'] = 'storage/' . $filePath;
+            $file->move(public_path('storage/travel_pictures'), $fileName);
+            $validated['travel_picture'] = 'storage/travel_pictures/' . $fileName;
         }
 
         $travel = Travel::create($validated);
 
         return redirect()->route('travels.index')->with('status', 'success')->with('message', 'Berhasil menambahkan data');
     }
+
 
     /**
      * Display the specified resource.
@@ -81,7 +81,6 @@ class TravelController extends Controller
      */
     public function update(Request $request, string $id)
     {
-
         $validated = $request->validate([
             'travel_name' => 'required|string|max:255',
             'travel_price' => 'required|numeric',
@@ -96,17 +95,18 @@ class TravelController extends Controller
         if ($request->hasFile('travel_picture')) {
             $file = $request->file('travel_picture');
             $fileName = time() . '_' . $file->getClientOriginalName();
-            $filePath = $file->storeAs('travel_pictures', $fileName, 'public');
+            $file->move(public_path('storage/travel_pictures'), $fileName);
 
-            $validated['travel_picture'] = 'storage/' . $filePath;
+            $validated['travel_picture'] = 'storage/travel_pictures/' . $fileName;
         } else {
             unset($validated['travel_picture']);
         }
 
         $travel->update($validated);
 
-        return redirect()->route('travel.index')->with('status', 'success')->with('message', 'Berhasil mengubah data');
+        return redirect()->route('travels.index')->with('status', 'success')->with('message', 'Berhasil mengubah data');
     }
+
 
 
     /**

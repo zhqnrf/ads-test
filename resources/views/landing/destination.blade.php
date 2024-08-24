@@ -1,18 +1,13 @@
 @include('landing.layouts.header')
 
-<section id="destination" class="destination-section ptb-100 bg-light">
+<section id="destination" class="destination-section ptb-100 pt-0 bg-light">
     <div class="container">
-        <div class="section-title">
-            <h2>Destinasi</h2>
-            <p>Perjalanan telah membantu kami memahami makna hidup dan membuat kami menjadi orang yang lebih baik.
-                Setiap kali kami bepergian, kami melihat dunia dengan mata yang baru.</p>
-        </div>
-
+        <h2 class="justify-content-center">Destinasi</h2>
         <div class="row mb-4 justify-content-center">
-            <div class="col-md-8">
+            <div class="col-12">
                 <form action="{{ url()->current() }}" method="GET">
-                    <div class="row justify-content-center align-items-center m-auto">
-                        <div class="col-lg-3 col-md-3">
+                    <div class="row gy-3 justify-content-center align-items-center">
+                        <div class="col-lg-2 col-md-4 col-sm-6 m-0">
                             <select class="form-select" name="origin" aria-label="Select Origin">
                                 <option selected value="">Choose Origin</option>
                                 @foreach ($origins as $origin)
@@ -23,7 +18,7 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="col-lg-3 col-md-3">
+                        <div class="col-lg-2 col-md-4 col-sm-6">
                             <select class="form-select" name="destination" aria-label="Select Destination">
                                 <option selected value="">Choose Destination</option>
                                 @foreach ($origins as $origin)
@@ -34,7 +29,7 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="col-lg-3 col-md-3">
+                        <div class="col-lg-2 col-md-4 col-sm-6">
                             <select class="form-select" name="departure" aria-label="Select Departure Time">
                                 <option selected value="">Choose Departure Time</option>
                                 @foreach ($departures as $departure)
@@ -45,13 +40,18 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="col-lg-2 col-md-3 ms-5">
+                        <div class="col-lg-2 col-md-4 col-sm-6 ms-4">
+                            <input type="number" name="price" class="form-control" value="{{ request('price') }}"
+                                aria-label="Select Price" placeholder="Enter Price" style="border: 1px solid #000">
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
                             <button class="btn btn-primary w-100" type="submit">Filter</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
+
 
         <!-- Travel Cards Section -->
         <div class="row filtr-container">

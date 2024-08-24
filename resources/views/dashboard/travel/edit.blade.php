@@ -89,8 +89,7 @@
                                             @enderror
                                         </div>
                                         <div class="col-md-12 mb-3">
-                                            <label for="travel_picture" class="form-label">travel_picture Tahun
-                                                Akademik</label>
+                                            <label for="travel_picture" class="form-label">Gambar</label>
                                             <input type="file" name="travel_picture" id="travel_picture"
                                                 class="form-control" accept="image/*">
                                             @error('travel_picture')

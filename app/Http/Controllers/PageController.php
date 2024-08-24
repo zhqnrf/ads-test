@@ -17,13 +17,16 @@ class PageController extends Controller
         $travels = Travel::when($request->origin, function ($query, $origin) {
             return $query->where('id_origin', $origin);
         })
-        ->when($request->destination, function ($query, $destination) {
-            return $query->where('id_destination', $destination);
-        })
-        ->when($request->departure, function ($query, $departure) {
-            return $query->where('id_departure', $departure);
-        })
-        ->get();
+            ->when($request->destination, function ($query, $destination) {
+                return $query->where('id_destination', $destination);
+            })
+            ->when($request->departure, function ($query, $departure) {
+                return $query->where('id_departure', $departure);
+            })
+            ->when($request->price, function ($query, $price) {
+                return $query->where('travel_price', 'like', '%' . $price . '%');
+            })
+            ->get();
         $origins = Origins::all();
         $departures = Departures::all();
 

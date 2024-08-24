@@ -87,9 +87,9 @@
                         <div class="logo">
                             <a href="{{ route('home') }}">
                                 <img src="travel/assets/img/logo.png" class="logo1" alt="Logo"
-                                    style="height: 80px">
+                                    style="height: 60px">
                                 <img src="travel/assets/img/logo.png" class="logo2" alt="Logo"
-                                    style="height: 80px">
+                                    style="height: 60px">
                             </a>
                         </div>
                         <div class="cart responsive">
@@ -103,8 +103,8 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand" href="{{ route('home') }}">
-                            <img src="travel/assets/img/logo.png" class="logo1" alt="Logo" style="height: 80px">
-                            <img src="travel/assets/img/logo.png" class="logo2" alt="Logo" style="height: 80px">
+                            <img src="travel/assets/img/logo.png" class="logo1" alt="Logo" style="height: 60px">
+                            <img src="travel/assets/img/logo.png" class="logo2" alt="Logo" style="height: 60px">
                         </a>
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav ms-auto">

@@ -14,7 +14,7 @@
         @endif
 
         <div class="mb-3 d-flex justify-content-between align-items-center">
-            <h1 class="h3">Data Kategori Departure</h1>
+            <h1 class="h3">Data Waktu Berangkat</h1>
             <a href="{{ route('departure.create') }}" class="btn btn-primary">Tambah Data</a>
         </div>
 
@@ -32,8 +32,8 @@
                         <tbody>
                             @forelse ($departures as $departure)
                                 <tr>
-                                    <td>{{$departure->id ?? ''}}</td>
-                                    <td>{{$departure->departure_category ?? ''}}</td>                      
+                                    <td>{{ $departure->id ?? '' }}</td>
+                                    <td>{{ $departure->departure_category ?? '' }}</td>
                                     <td class="table-action">
                                         <div class="d-flex align-items-center">
                                             <a href="{{ route('departure.edit', ['departure' => $departure->id]) }}"
