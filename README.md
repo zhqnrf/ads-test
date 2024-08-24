@@ -79,7 +79,7 @@ Pastikan sistem Anda memenuhi persyaratan berikut untuk menjalankan aplikasi ini
 
 5. **Konfigurasi Database:**
    - Buka file `.env` dan sesuaikan pengaturan koneksi database sesuai dengan konfigurasi yang Anda gunakan.
-   - Ubah pengaturan database dari `sqlite` ke `mysqli` jika diperlukan.
+   - Ubah pengaturan database dari `sqlite` ke `mysqli`.
 
 6. **Migrasi Database:**
    - Jalankan perintah berikut untuk melakukan migrasi database dan menyertakan data awal:
