@@ -58,8 +58,9 @@
             @foreach ($travels as $travel)
                 <div class="col-lg-4 col-md-6 filtr-item" data-category="1" data-sort="value">
                     <div class="item-single mb-30">
-                        <div class="image">
-                            <img src="{{ asset($travel->travel_picture ?? '') }}" alt="Demo Image">
+                        <div class="image"style="height:200px;">
+                            <img src="{{ asset($travel->travel_picture ?? '') }}" alt="Demo Image"
+                                style="height: 200px; background-position:center;">
                         </div>
                         <div class="content">
                             <h3>
